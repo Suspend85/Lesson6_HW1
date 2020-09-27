@@ -8,35 +8,26 @@ class Animals:
         return "покормили"
 
 
-class Egg_laying(Animals):  # несущие яйца
-    # Какой из 2х вариантов правильнее?
-    # 1
-    def do_lay(self):
-        return "несет яйца"
-
+class EggLaying(Animals):  # несущие яйца
     def do_smth(self):
-        return "которое " + Egg_laying.do_lay(self)
-
-    # 2
-    # def do_smth(self):
-    #     return 'которое несет яйца'
+        return "которое несет яйца"
 
 
-class Chicken(Egg_laying):
+class Chicken(EggLaying):
     representative = "Курица"
 
     def do_voice(self):
         return "Кококо"
 
 
-class Goose(Egg_laying):
+class Goose(EggLaying):
     representative = "Гусь"
 
     def do_voice(self):
         return "Га-га"
 
 
-class Duck(Egg_laying):
+class Duck(EggLaying):
     representative = "Утка"
 
     def do_voice(self):
